@@ -1,0 +1,65 @@
+.roadmap-section{
+    text-align: center;
+    padding: 50px 0;
+    background-color: #305017;
+    
+    h2{
+        color: white;
+    }
+
+    .maps-big-container,
+    .maps-small-container{
+        max-width: 90%;
+        max-width: 920px;
+        position: relative;
+        height: 100%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;;
+
+        .middle-line{
+            position: absolute;
+            top: 0;
+            left: calc(50% - 4px);
+            width: 8px;
+            background-color: #FDBF22;
+            height: 100%;
+        }
+
+        .left-cards-container,
+        .right-cards-container{
+            width: 42%;
+            &>*{
+                margin-bottom: 80px;
+
+                &:last-child{
+                    margin-bottom: 0;
+                }
+            }
+
+        }
+
+        .right-cards-container{
+            margin-top: 170px;
+        }
+    }
+
+    .maps-small-container{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    .roadmap-section{
+        .maps-big-container{
+            display: none;
+        }
+        .maps-small-container{
+            display: block;
+
+            &>*{
+                margin-bottom: 35px;
+            }
+        }
+    }
+}

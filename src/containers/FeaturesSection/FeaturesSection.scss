@@ -1,0 +1,41 @@
+.features-section{
+    padding: 100px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 8%;
+
+    .features-container{
+        width: 47%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 30px;
+    }
+
+    .image-container{
+        width: 47%;
+        background-color: #6FA174;
+        padding: 30px;
+        border-radius: 14px;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    .features-section{
+        display: block;
+
+        .features-container, 
+        .image-container{
+            width: 100%;
+        }
+
+        .image-container{
+            padding: 20px;
+        }
+
+        .features-container{
+            margin-bottom: 50px;
+            grid-gap: 20px;
+        }
+    }
+}

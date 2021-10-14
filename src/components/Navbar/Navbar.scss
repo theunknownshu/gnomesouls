@@ -1,0 +1,110 @@
+nav{
+    position: fixed;
+    padding: 0 5%;
+    color: #305017;
+    width: 100%;
+    z-index: 200;
+    transition: background-color .5s;
+
+    &[transparent = 'false']{
+        background-color: #648d68d8;
+
+        .content{
+            h4{
+                color: white;
+            }
+            .nav-links-pc{
+                li{
+                    color: #fff;
+                }
+            }
+        }
+    }
+
+    .content{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 80px;
+        width: 100%;
+
+        h4{
+            font-family: 'Revalia', cursive;
+            font-weight: 400;
+            transition: color .6s;
+        }
+
+        .nav-links-pc{
+            padding: 0;
+            list-style: none;
+            width: 55%;
+            display: flex;
+            justify-content: space-around;
+            font-weight: 500;
+
+            li{
+                cursor: pointer;
+                position: relative;
+                overflow: hidden;
+                padding-bottom: 2px;
+
+                &:nth-child(3),
+                &:nth-child(4){
+                    color: white;
+                }
+
+                &::before{
+                    content: '';
+                    position: absolute;
+                    height: 2px;
+                    background-color: #FDBF22;
+                    width: 100%;
+                    top: calc(100% - 2px);
+                    transform: translateX(-102%);
+                    transition: all .5s;
+                }
+
+                &:hover{
+                    &::before{
+                        transform: translateX(0);
+                    }
+                }
+            }
+        }
+
+
+        .icons{
+            display: flex;
+            align-items: center;
+            a{
+                border: none;
+                background: none;
+                cursor: pointer;
+                &:first-child{
+                    margin-right: 25px;
+                }
+            }
+        }
+
+        .toggle-icon{
+            display: none;
+        }        
+    }
+
+
+}
+
+@media only screen and (max-width: 768px){
+    nav{
+        .content{
+            height: 65px;
+            .nav-links-pc,
+            .icons{
+                display: none;
+            }
+            .toggle-icon{
+                display: block;
+            }            
+        }
+    }
+}
